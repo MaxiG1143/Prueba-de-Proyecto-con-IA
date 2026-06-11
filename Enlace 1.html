@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Enlaces a los recursos externos --->
+
+    <!-- Enlaces a los recursos externos --->
     <script
       src="https://kit.fontawesome.com/29c3be7601.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,14 +19,51 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
 <!-- Titulo de la pagina web --->
-    <title>Primera Pagina</title>
+    <title>Catalogo</title>
 </head>
-<body>
+<body class="catalogo">
+<style>
+  :root{--bg1:#020617;--bg2:#071032;--accent:#00f0ff;--magenta:#c400ff}
+  html,body{height:100%;margin:0;font-family:'Orbitron',monospace;color:#e6f7ff}
+  body.catalogo{background:radial-gradient(ellipse at top left,rgba(0,240,255,0.06),transparent 20%),linear-gradient(135deg,var(--bg1),var(--bg2));padding:20px;max-width:1200px;margin:0 auto;box-sizing:border-box}
+  h5{color:var(--accent);text-shadow:0 0 12px rgba(0,240,255,0.18);margin:0 0 12px;font-size:clamp(1.2rem,2vw,1.8rem)}
+  p{color:transparent;text-shadow:0 0 18px rgba(196,0,255,0.18);font-weight:700;font-size:clamp(1rem,1.5vw,1.2rem)}
+  .formulario{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0 22px}
+  .formulario_input{background:rgba(255,255,255,0.03);border:1px solid rgba(0,240,255,0.12);padding:12px 16px;border-radius:999px;color:#e6f7ff;outline:none;backdrop-filter:blur(6px);flex:1 1 220px;min-width:0}
+  .formulario_input:focus{box-shadow:0 0 18px rgba(0,240,255,0.14)}
+  .gradient-btn{background:linear-gradient(90deg,var(--accent),var(--magenta));border:none;color:#021016;padding:10px 18px;border-radius:999px;cursor:pointer;font-weight:700;flex:0 0 auto}
+  .cargador-iphone{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:18px}
+  .cargador-iphone img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 30px rgba(0,0,0,0.6),0 0 18px rgba(0,240,255,0.06);transition:transform .35s,filter .35s}
+  .cargador-iphone img:hover{transform:translateY(-6px) scale(1.03);filter:drop-shadow(0 0 18px rgba(0,240,255,0.25)) saturate(130%)}
+  a[title]{display:inline-block;margin-top:22px;color:var(--accent);text-decoration:none;padding:8px 14px;border-radius:8px;border:1px solid rgba(0,240,255,0.08);box-shadow:0 6px 20px rgba(0,0,0,0.5);backdrop-filter:blur(4px)}
+  @media (max-width:768px){body.catalogo{padding:16px}.formulario{justify-content:stretch}.gradient-btn{width:100%;max-width:none}.cargador-iphone img{height:140px}}
+  @media (max-width:480px){body.catalogo{padding:12px}.cargador-iphone img{height:120px}}
+</style>
+
+            <!-- Formulario de la pagina web --->
+      <h5>Todo lo que necesitas lo podes buscar acá 👇</h5>
+      <form class="formulario">
+        <input
+          class="formulario_input"
+          type="search"
+          name="search"
+          required
+          placeholder=""
+        />
+        <button class="gradient-btn">Buscar</button>
+      </form>
 
 <!-- Parrafo de la primera pagina --->
-    <p>Esta es la primera página.</p>
+    <p>Nuestro Catalogo</p>
+    <div class="cargador-iphone"> 
+        <img src="Cargador Iphone/657845244_1509298190544531_7250929358544808559_n.jpg" alt="iPhone charger product displayed on white background">
+        <img src="Cargador Iphone/659694890_714377981698054_3711326468090956098_n.jpg" alt="iPhone charger cable close-up showing connector details">
+        <img src="Cargador Iphone/668487879_1671488077199024_5571640194247258711_n.jpg" alt="iPhone charger with USB adapter block and cable assembled">
+        <img src="Cargador Iphone/672345282_1653528852497916_4807806772218185732_n.jpg" alt="iPhone charger component featuring lightning connector and charging port">
+        <img src="Cargador Iphone/Gemini_Generated_Image_rjd0cnrjd0cnrjd0.png" alt="iPhone charger product illustration demonstrating charging capability">
+    </div>
     
 <!-- Enlace a la página principal --->
-    <a href="index.html" title="enlace a la página principal">Volver</a>
+    <a href="index.html" title="enlace a la página principal">Inicio</a>
 </body>
 </html>

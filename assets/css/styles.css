@@ -1,42 +1,317 @@
-.bienvenidos {
-    color: red;
-  font-family: "Playwrite NZ Guides", cursive;
-  font-weight: 400;
-  font-style: normal;
+/* Estilos CSS para la página web */
+body {
+    margin: 0;
+    min-height: 100vh;
 }
 
+main {
+    width: 500%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+  --background: #050610;
+  --surface: rgba(11, 20, 43, 0.72);
+  --surface-strong: rgba(17, 30, 58, 0.9);
+  --accent-1: #33d9ff;
+  --accent-2: #9d56ff;
+  --accent-3: #3effab;
+  --text: #e8f0ff;
+  --muted: #94a2c6;
+  --card-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Fondo de página */
+.detalles {
+    margin: 0;
+    padding: 40px 24px 80px;
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 20%, rgba(51, 217, 255, 0.18), transparent 18%),
+                radial-gradient(circle at 80% 10%, rgba(157, 86, 255, 0.15), transparent 20%),
+                linear-gradient(180deg, #050610 0%, #070a1d 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Texto de bienvenida */
+.bienvenidos {
+    color: var(--text);
+    font-family: "Orbitron", "Space Mono", monospace;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    text-align: center;
+    text-shadow: 0 0 18px rgba(51, 217, 255, 0.75), 0 0 34px rgba(157, 86, 255, 0.35);
+    margin: 0;
+}
+
+.index-gradient-banner {
+  width: min(100%, 980px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 22px 24px;
+  background: rgba(11, 20, 43, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Párrafo */
 .parrafo {
     font-size: 15px;
-    color: blue;
-  font-family: "Roboto";
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: oblique;
-  text-align: justify;
-  font-variation-settings:
-    "wdth" 100,;
-}
-
-.primera{
-    color: green;
-    font-family: "Roboto";
-    font-optical-sizing: auto;
-    font-weight: 100;
+    color: var(--muted);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-style: normal;
+    text-align: justify;
+    margin: 10px 0;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.gradient-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.6s ease;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(51, 217, 255, 0.35), 0 18px 30px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  background-image: linear-gradient(90deg, var(--accent-3), var(--accent-1));
+  box-shadow: 0 0 28px rgba(63, 255, 183, 0.4), 0 20px 40px rgba(0, 0, 0, 0.24);
+}
+
+/* Primera sección */
+.primera,
+.segunda {
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     text-decoration: none;
+    text-shadow: 0 0 18px rgba(51, 217, 255, 0.18);
 }
 
+/* Imagen de la primera sección */
 .primera_imagen{
-    width: 500px;
-    height: 500px;
-}
-
-.logo{
-    width: 80px;
-    height: 100px;
-    background-color: rgb(81, 29, 238);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
 }
 
 .h2{
-    background-color: rgb(205, 11, 11);
+    background-color: rgba(205, 11, 11, 0.95);
+    color: #ffffff;
+    margin: 0;
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 24px rgba(205, 11, 11, 0.35);
+    display: inline-block;
 }
+
+/* Formulario */
+.formulario {
+    width: min(700px, 100%);
+    background: rgba(14, 24, 46, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formulario_input {
+   width: 100%;
+   padding: 14px 16px;
+   background-color: rgba(255, 255, 255, 0.08);
+   color: var(--text);
+   margin: 0;
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   border-radius: 14px;
+   outline: none;
+   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.06);
+   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.formulario_input:focus {
+   border-color: var(--accent-1);
+   box-shadow: 0 0 18px rgba(51, 217, 255, 0.18);
+}
+
+.formulario_submit {
+    width: fit-content;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    box-shadow: 0 0 24px rgba(51, 217, 255, 0.35);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.formulario_submit:hover {
+    transform: translateY(-2px);
+}
+
+/* Cargador de iPhone */
+.cargador-iphone {
+    display: flex;
+    width: fit-content;
+    height: 300px;
+    margin: 20px;
+    gap: 12px;
+    padding: 18px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.cargador-iphone img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+
+.nosotros,
+.informacion {
+    width: min(85%, 1000px);
+    border-radius: 24px;
+    padding: 22px 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    background: rgba(10, 18, 39, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 72px rgba(0, 0, 0, 0.28);
+}
+
+.nosotros {
+    border-color: rgba(51, 217, 255, 0.18);
+}
+
+.informacion {
+    border-color: rgba(157, 86, 255, 0.18);
+}
+
+.footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 980px) {
+  .index-gradient-banner {
+    width: 100%;
+    padding: 20px;
+  }
+  .primera_imagen {
+    max-width: 100%;
+  }
+  .cargador-iphone {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .detalles {
+    padding: 30px 16px 60px;
+  }
+  .index-gradient-banner {
+    padding: 18px 20px;
+  }
+  .formulario {
+    width: 100%;
+  }
+  .formulario_submit,
+  .gradient-btn {
+    width: 100%;
+  }
+  .cargador-iphone {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .nosotros,
+  .informacion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalles {
+    padding: 24px 12px 50px;
+  }
+  .index-gradient-banner {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+  .formulario {
+    padding: 20px;
+  }
+  .formulario_input {
+    padding: 12px 14px;
+  }
+  .cargador-iphone {
+    padding: 14px;
+    gap: 10px;
+  }
+  .nosotros,
+  .informacion {
+    padding: 18px 20px;
+  }
+  .footer {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .products { grid-template-columns: 1fr; }
+  .bienvenidos {
+    font-size: 1.4rem;
+    letter-spacing: 0.18em;
+  }
+}
+
